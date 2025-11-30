@@ -1,14 +1,47 @@
-import { Text, StyleSheet, View } from 'react-native'
-import React, { Component } from 'react'
+import React from 'react';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-export default class app extends Component {
-  render() {
-    return (
-      <View>
-        <Text>app</Text>
-      </View>
-    )
-  }
+import Inicio from "./Screens/InicioScreen";
+import Hemorragia from "./Screens/HemorragiaScreen";
+import Rcp from "./Screens/RcpScreen";
+import Fractura from "./Screens/FracturasScreen";
+import Esguince from "./Screens/EsguincesScreen";
+
+const Stack = createNativeStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+
+        <Stack.Screen 
+          name="Inicio" 
+          component={Inicio} 
+          options={{ title: "Pantalla principal" }}
+        />
+
+        <Stack.Screen 
+          name="Hemorragia" 
+          component={Hemorragia} 
+        />
+
+        <Stack.Screen 
+          name="RCP" 
+          component={Rcp} 
+        />
+
+        <Stack.Screen 
+          name="Fractura" 
+          component={Fractura} 
+        />
+
+        <Stack.Screen 
+          name="Esguince" 
+          component={Esguince} 
+        />
+
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
-
-const styles = StyleSheet.create({})
