@@ -56,6 +56,14 @@ export default function Inicio({ navigation }) {
           <Text style={styles.textoBoton}>Quemaduras</Text>
         </TouchableOpacity>
       </View>
+
+      <View style={styles.botonContainer}>
+        <TouchableOpacity
+        style={styles.boton}
+        onPress={()=> navigation.navigate("Numeros")}>
+          <Text style={styles.textoBoton}>Números Emergecias</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -71,7 +79,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     marginBottom: 30,
   },
-  subtitulotitulo:{
+  subtitulo:{
     fontSize: 20,
     marginBottom: 30,
   },
