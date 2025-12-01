@@ -8,6 +8,7 @@ import Fractura from "./Screens/FracturasScreen";
 import Esguince from "./Screens/EsguincesScreen";
 import Atragantamiento from "./Screens/AtragantamientoScreen";
 import Quemadura from "./Screens/QuemadurasScreen";
+import Numeros from "./Screens/NumerosEmergenciaScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +23,7 @@ export default function App() {
         <Stack.Screen name="Esguince" component={Esguince}/>
         <Stack.Screen name="Atragantamiento" component={Atragantamiento}/>
         <Stack.Screen name="Quemadura" component={Quemadura}/>
+        <Stack.Screen name="Numeros" component={Numeros}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
