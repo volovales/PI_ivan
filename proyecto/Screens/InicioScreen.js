@@ -57,13 +57,6 @@ export default function Inicio({ navigation }) {
         </TouchableOpacity>
       </View>
 
-      <View style={styles.botonContainer}>
-        <TouchableOpacity
-        style={styles.boton}
-        onPress={()=> navigation.navigate("Numeros")}>
-          <Text style={styles.textoBoton}>Números Emergecias</Text>
-        </TouchableOpacity>
-      </View>
     </View>
   );
 }
@@ -82,6 +75,7 @@ const styles = StyleSheet.create({
   subtitulo:{
     fontSize: 20,
     marginBottom: 30,
+    textAlign: 'center',
   },
   botonContainer: {
     marginTop: 20,

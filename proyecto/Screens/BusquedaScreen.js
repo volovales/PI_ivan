@@ -107,27 +107,38 @@ export default function Busqueda({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  container:{ flex:1, padding:16, backgroundColor:'#fff' },
-  input:{ borderWidth:2, borderColor:'#b22222', padding:10, borderRadius:10, marginBottom:12 },
-  titulo:{ fontSize:18, fontWeight:'bold', marginBottom:10 },
-  item:{ padding:12, backgroundColor:'#f3f3f3', borderRadius:8, marginBottom:8, borderWidth:1, borderColor:'#ddd' },
-  itemText:{ fontSize:16 },
-  histItem:{
-    flexDirection:'row',
-    alignItems:'center',
-    padding:12,
-    backgroundColor:'#f8f8f8',
-    borderRadius:8,
-    marginBottom:8,
-    borderWidth:1,
-    borderColor:'#ddd'
-  },
-  botonLimpiar:{
-    backgroundColor:'#b22222',
-    padding:10,
-    borderRadius:8,
-    marginBottom:10,
-    alignItems:'center'
-  },
-  botonTexto:{ color:'#fff', fontWeight:'bold' }
+  container:{ 
+    flex:1, 
+    padding:16, 
+    backgroundColor:'#fff' 
+  },
+  input:{ 
+    borderWidth:1, 
+    borderColor:'#b22222', 
+    padding:10, 
+    borderRadius:10, 
+    marginBottom:12,
+    marginTop: 40 
+  },
+  titulo:{ fontSize:18, fontWeight:'bold', marginBottom:10 },
+  item:{ padding:12, backgroundColor:'#f3f3f3', borderRadius:8, marginBottom:8, borderWidth:1, borderColor:'#ddd' },
+  itemText:{ fontSize:16 },
+  histItem:{
+    flexDirection:'row',
+    alignItems:'center',
+    padding:12,
+    backgroundColor:'#f8f8f8',
+    borderRadius:8,
+    marginBottom:8,
+    borderWidth:1,
+    borderColor:'#ddd'
+  },
+  botonLimpiar:{
+    backgroundColor:'#b22222',
+    padding:10,
+    borderRadius:8,
+    marginBottom:10,
+    alignItems:'center'
+  },
+  botonTexto:{ color:'#fff', fontWeight:'bold' }
 });

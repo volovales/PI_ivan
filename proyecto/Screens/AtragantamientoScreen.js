@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, ScrollView, Button, Linking } from "react-native";
+import { StyleSheet, Text, View, Image, ScrollView, Button, Linking, SafeAreaView } from "react-native";
 
 export default function Atragantamiento() {
 
@@ -8,8 +8,11 @@ export default function Atragantamiento() {
   };
 
   return (
-    <View style={styles.container}>
-      <ScrollView style={styles.scroll}>
+    <SafeAreaView style={styles.container}>
+      <ScrollView 
+        style={styles.scroll}
+        contentContainerStyle={styles.scrollContent} 
+      >
 
         <Text style={styles.title}>Atragantamientos</Text>
 
@@ -58,7 +61,7 @@ export default function Atragantamiento() {
         />
 
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -70,6 +73,9 @@ const styles = StyleSheet.create({
   scroll: {
     flex: 1,
     paddingHorizontal: 20,
+  },
+  scrollContent: {
+    paddingBottom: 60,
   },
   title: {
     fontSize: 28,

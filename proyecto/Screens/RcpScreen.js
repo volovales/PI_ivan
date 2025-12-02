@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, ScrollView, Button, Linking } from "react-native";
+import { StyleSheet, Text, View, Image, ScrollView, Button, Linking, SafeAreaView } from "react-native";
 
 export default function Rcp() {
 
@@ -8,8 +8,11 @@ export default function Rcp() {
   };
 
   return (
-    <View style={styles.container}>
-      <ScrollView style={styles.scroll}>
+    <SafeAreaView style={styles.container}>
+      <ScrollView 
+        style={styles.scroll}
+        contentContainerStyle={styles.scrollContent} 
+      >
 
         <Text style={styles.title}>RCP (Reanimación Cardiopulmonar)</Text>
 
@@ -55,7 +58,7 @@ export default function Rcp() {
         />
 
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -67,6 +70,9 @@ const styles = StyleSheet.create({
   scroll: {
     flex: 1,
     paddingHorizontal: 20,
+  },
+  scrollContent: {
+    paddingBottom: 60,
   },
   title: {
     fontSize: 28,

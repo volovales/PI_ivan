@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, ScrollView, Button, Linking } from "react-native";
+import { StyleSheet, Text, View, Image, ScrollView, Button, Linking, SafeAreaView } from "react-native";
 
 export default function Esguince() {
 
@@ -8,8 +8,11 @@ export default function Esguince() {
   };
 
   return (
-    <View style={styles.container}>
-      <ScrollView style={styles.scroll}>
+    <SafeAreaView style={styles.container}>
+      <ScrollView 
+        style={styles.scroll}
+        contentContainerStyle={styles.scrollContent} 
+      >
 
         <Text style={styles.title}>Esguinces</Text>
 
@@ -30,11 +33,11 @@ export default function Esguince() {
         <Text style={styles.text}>
           Todos son provocados por accidentes, caídad, mal movimiento, etc. {"\n"}
           + Primer Grado: Estos son los mas leves ya que son ocacionados por un estiramiento excesivo del ligamento sin llegar a una ruptura
-            se identifican por ser menos dolorosos, poca hinchazón y con una movilidad de la zona casi normal.{"\n"}
+          se identifican por ser menos dolorosos, poca hinchazón y con una movilidad de la zona casi normal.{"\n"}
           + Segundo Grado: Son los cuales tienen una rotura parcial del ligamento y se identifican por ser tener un dolor más intenso que el anterior, una
-            hinchazón mas marcada y se le dificulta mover o apoyar la articulación de la zona. {"\n"}
+          hinchazón mas marcada y se le dificulta mover o apoyar la articulación de la zona. {"\n"}
           + Tercer Grado: EL cuál cuenta con una rotura completa del ligamento y se identifica por un dolor intenso, hinchazón muy marcada y no logra hacer ningún movimiento
-            de la zona afectada.
+          de la zona afectada.
         </Text>
 
         <Text style={styles.subtitle}>Pasos a seguir</Text>
@@ -63,7 +66,7 @@ export default function Esguince() {
         />
 
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -75,6 +78,9 @@ const styles = StyleSheet.create({
   scroll: {
     flex: 1,
     paddingHorizontal: 20,
+  },
+  scrollContent: {
+    paddingBottom: 60,
   },
   title: {
     fontSize: 28,

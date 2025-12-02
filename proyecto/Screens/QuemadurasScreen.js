@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View, Image, ScrollView, Button, Linking } from "react-native";
+import { StyleSheet, Text, View, Image, ScrollView, Button, Linking, SafeAreaView } from "react-native";
 
 export default function Quemaduras() {
 
@@ -8,10 +8,13 @@ export default function Quemaduras() {
   };
 
   return (
-    <View style={styles.container}>
-      <ScrollView style={styles.scroll}>
+    <SafeAreaView style={styles.container}>
+      <ScrollView 
+        style={styles.scroll}
+        contentContainerStyle={styles.scrollContent} 
+      >
 
-        <Text style={styles.title}>Atragantamientos</Text>
+        <Text style={styles.title}>Quemaduras</Text>
 
         <Text style={styles.subtitle}>Aviso Importante:</Text>
         <Text style={styles.text}>
@@ -54,7 +57,7 @@ export default function Quemaduras() {
         />
 
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -66,6 +69,9 @@ const styles = StyleSheet.create({
   scroll: {
     flex: 1,
     paddingHorizontal: 20,
+  },
+  scrollContent: {
+    paddingBottom: 60,
   },
   title: {
     fontSize: 28,
